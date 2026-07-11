@@ -1,0 +1,75 @@
+/* Custom cursor — only active when hw-custom-cursor class is set by cursor.js
+   (i.e. never on touch devices, never when reduced-motion is requested) */
+.hw-custom-cursor, .hw-custom-cursor * { cursor: none !important; }
+
+.hw-cursor-dot, .hw-cursor-ring {
+  position: fixed;
+  top: 0; left: 0;
+  pointer-events: none;
+  z-index: 9999;
+  border-radius: 50%;
+  transform: translate(-100px, -100px);
+  will-change: transform;
+}
+.hw-cursor-dot {
+  width: 6px; height: 6px;
+  background: var(--primary, #00e676);
+  margin: -3px 0 0 -3px;
+  box-shadow: 0 0 10px rgba(0,230,118,0.7);
+}
+.hw-cursor-ring {
+  width: 34px; height: 34px;
+  margin: -17px 0 0 -17px;
+  border: 1.5px solid rgba(0,230,118,0.55);
+  transition: width 0.2s ease, height 0.2s ease, margin 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+.hw-cursor-ring.hw-cursor-hover {
+  width: 52px; height: 52px;
+  margin: -26px 0 0 -26px;
+  background: rgba(0,230,118,0.08);
+  border-color: var(--primary, #00e676);
+}
+.hw-cursor-ring.hw-cursor-down {
+  width: 26px; height: 26px;
+  margin: -13px 0 0 -13px;
+}
+
+/* Reveal-on-scroll utility, used across the landing page */
+.hw-reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.7s cubic-bezier(0.16,1,0.3,1), transform 0.7s cubic-bezier(0.16,1,0.3,1);
+}
+.hw-reveal.hw-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+  .hw-reveal { opacity: 1; transform: none; transition: none; }
+}
+
+/* Smooth fade transition when navigating between landing <-> app */
+.hw-page-transition {
+  position: fixed; inset: 0; z-index: 9998;
+  background: var(--bg, #060f0b);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.38s ease;
+}
+.hw-page-transition.hw-transition-active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* Page load fade-in (avoids an abrupt flash when a page is entered via transition) */
+body { animation: hwPageIn 0.35s ease; }
+@keyframes hwPageIn { from { opacity: 0; } to { opacity: 1; } }
+
+/* Keyboard-accessible focus states, styled to match the brand rather than the
+   browser default, visible only for keyboard users (not on mouse click) */
+:focus { outline: none; }
+:focus-visible {
+  outline: 2px solid var(--primary, #00e676);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
