@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="virtual-protocol-site-verification" content="a6fea4a7f49a539a89cbaa86d7458dba">
+<title>Hoodwise — Understand Robinhood Chain</title>
+<meta name="description" content="Hoodwise is an independent AI guide to Robinhood Chain — the tech, the products, and the ecosystem, explained in plain English.">
+<link rel="icon" href="/hoodwise-mark.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/shared.css">
+<link rel="stylesheet" href="/landing.css">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Hoodwise">
+<meta property="og:title" content="Hoodwise — Chain intelligence, without the noise.">
+<meta property="og:description" content="An independent, source-grounded guide to Robinhood Chain.">
+<meta property="og:url" content="https://hoodwise.xyz/">
+<meta property="og:image" content="https://hoodwise.xyz/hoodwise-banner.png">
+<meta property="og:image:alt" content="Hoodwise — Your AI guide to Robinhood Chain">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Hoodwise — Chain intelligence, without the noise.">
+<meta name="twitter:description" content="An independent, source-grounded guide to Robinhood Chain.">
+<meta name="twitter:image" content="https://hoodwise.xyz/hoodwise-banner.png"></head>
+<body>
+  <div class="site-atmosphere" aria-hidden="true">
+    <i class="atmosphere-orb atmosphere-orb-a"></i>
+    <i class="atmosphere-orb atmosphere-orb-b"></i>
+    <i class="atmosphere-beam"></i>
+  </div>
+  <canvas class="landing-atmosphere" id="landingAtmosphere" aria-hidden="true"></canvas>
+  <div class="hw-boot" id="bootSequence" aria-hidden="true">
+    <div class="boot-mark">↗</div>
+    <div class="boot-copy"><span>HOODWISE / INITIALIZING</span><b>CHAIN INTELLIGENCE ONLINE</b></div>
+    <div class="boot-track"><i></i></div>
+  </div><nav class="nav">
+    <a href="/" class="nav-brand">
+      <svg viewBox="0 0 100 100" class="nav-mark" aria-hidden="true">
+        <rect width="100" height="100" rx="24" fill="url(#navg)"/>
+        <path d="M28 68 L46 32 L58 52 L72 24" stroke="#06150e" stroke-width="9" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <defs><linearGradient id="navg" x1="0" y1="0" x2="100" y2="100"><stop offset="0%" stop-color="#00e676"/><stop offset="100%" stop-color="#0a5c34"/></linearGradient></defs>
+      </svg>
+      <span>Hoodwise</span>
+    </a>
+    <div class="nav-links" id="navLinks">
+      <button type="button" class="nav-section-link" data-section="knows" data-scroll-target="knows">What it knows</button>
+      <button type="button" class="nav-section-link" data-section="preview" data-scroll-target="preview">Preview</button>
+      <button type="button" class="nav-section-link" data-section="faq" data-scroll-target="faq">FAQ</button>
+    </div>
+    <a href="/app" class="nav-cta" data-transition>Launch Hoodwise</a>
+    <button class="nav-burger" id="navBurger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <button type="button" class="mobile-section-link" data-scroll-target="knows">What it knows</button>
+    <button type="button" class="mobile-section-link" data-scroll-target="preview">Preview</button>
+    <button type="button" class="mobile-section-link" data-scroll-target="faq">FAQ</button>
+    <a href="/app" class="mobile-cta" data-transition>Launch Hoodwise</a>
+  </div>
+
+  <header class="hero">
+    <canvas id="heroCanvas"></canvas>
+    <div class="hero-orbit hero-orbit-a" aria-hidden="true"></div>
+    <div class="hero-orbit hero-orbit-b" aria-hidden="true"></div>
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <div class="eyebrow hw-hero-item"><span class="live-dot"></span>INDEPENDENT CHAIN INTELLIGENCE</div>
+        <h1 class="hw-hero-item"><span class="hero-lead">Chain intelligence,</span><br><span>without the noise.</span></h1>
+        <div class="hero-command hw-hero-item" aria-label="Hoodwise signal status"><span class="command-prompt">//</span><span id="heroCommandText">DECODING CAPITAL MARKETS ONCHAIN</span><i></i></div>
+        <p class="hero-sub hw-hero-item">Hoodwise turns Robinhood Chain’s moving parts into the answer that matters — sourced, legible, and never padded with noise.</p>
+        <div class="hero-actions hw-hero-item">
+          <a href="/app" class="btn-primary" data-transition>Open the briefing <svg viewBox="0 0 24 24" width="15" height="15"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <button type="button" class="btn-secondary section-cta" data-scroll-target="knows">Explore coverage</button>
+        </div>
+        <div class="hero-proof hw-hero-item">
+          <span><b>01</b> focused chain</span><span><b>24/7</b> explainers</span><span><b>0</b> wallet access</span>
+        </div>
+      </div>
+      <div class="signal-console hw-hero-item" aria-label="Example Hoodwise briefing">
+        <div class="console-top"><span class="console-kicker"><i></i> HOODWISE / BRIEFING</span><span class="console-status">READY</span></div>
+        <div class="console-grid">
+          <div class="console-main">
+            <span class="console-label">ASKED TODAY</span>
+            <h2>“Is a Stock Token a real share?”</h2>
+            <p>Not yet. It’s a tokenized debt instrument designed for 24/7 trading and DeFi use — with a different legal structure from holding the underlying stock.</p>
+            <div class="console-source"><span>↗</span> Curated source context attached</div>
+          </div>
+          <div class="console-rail">
+            <div><span>01</span><b>STRUCTURE</b><em>tokenized debt</em></div>
+            <div><span>02</span><b>ACCESS</b><em>120+ countries</em></div>
+            <div><span>03</span><b>RISK</b><em>jurisdiction varies</em></div>
+          </div>
+        </div>
+        <div class="console-footer"><span>STATIC EXPLAINER VIEW</span><div class="console-pulse"><i></i><i></i><i></i><i></i><i></i></div><span>NOT FINANCIAL ADVICE</span></div>
+      </div>
+    </div>
+  </header>
+
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <span>MAINNET · JUL 01 2026</span><span>L2 · ARBITRUM ORBIT</span><span>SETTLES TO ETHEREUM</span><span>AI-NATIVE DESIGN</span><span>NO NATIVE TOKEN</span><span>120+ COUNTRIES</span>
+      <span>MAINNET · JUL 01 2026</span><span>L2 · ARBITRUM ORBIT</span><span>SETTLES TO ETHEREUM</span><span>AI-NATIVE DESIGN</span><span>NO NATIVE TOKEN</span><span>120+ COUNTRIES</span>
+    </div>
+  </div>
+
+  <section class="signal-deck" aria-label="Hoodwise signal deck">
+    <div class="deck-head"><span class="deck-status"><i></i> HOODWISE SIGNAL DECK</span><span>BUILT FOR CLARITY, NOT NOISE</span></div>
+    <div class="deck-grid">
+      <article class="deck-story"><div class="deck-index">01 / WHAT IS LIVE</div><h2>One place to understand the chain <em>before you act.</em></h2><p>Architecture, products, risk and the permissionless ecosystem—connected in one guided briefing.</p><div class="deck-route"><span>CHAIN</span><b></b><span>CONTEXT</span><b></b><span>CLARITY</span></div></article>
+      <article class="deck-radar"><div class="deck-index">02 / COVERAGE RADAR</div><div class="radar-core"><i></i><i></i><i></i><strong>HOOD</strong></div><div class="radar-tags"><span>STOCK TOKENS</span><span>EARN</span><span>AGENTS</span><span>DEFI</span></div></article>
+      <article class="deck-prompt"><div class="deck-index">03 / START HERE</div><p>Ask a question with a real decision behind it.</p><div class="prompt-options"><a href="/app?q=What+can+I+actually+use+on+Robinhood+Chain%3F" data-transition>“What can I actually use?” <i>↗</i></a><a href="/app?q=What+are+the+main+risks+to+verify+on+Robinhood+Chain%3F" data-transition>“What is the risk?” <i>↗</i></a><a href="/app?q=How+is+Robinhood+Chain+different+from+Base%3F" data-transition>“How is this different?” <i>↗</i></a></div></article>
+    </div>
+  </section>
+
+  <section class="observatory" aria-label="How Hoodwise builds a briefing">
+    <div class="observatory-copy hw-reveal">
+      <div class="section-eyebrow">SIGNAL OBSERVATORY</div>
+      <h2>Every answer gets a <em>clearer frame.</em></h2>
+      <p>Hoodwise does not just surface facts. It separates product structure, current context, and risk so the answer stays legible when the chain gets noisy.</p>
+      <div class="observatory-legend">
+        <span><i class="legend-source"></i> curated context first</span>
+        <span><i class="legend-current"></i> current context when needed</span>
+        <span><i class="legend-risk"></i> risk stays visible</span>
+      </div>
+    </div>
+    <div class="observatory-surface hw-reveal" aria-hidden="true">
+      <div class="observatory-topline"><span>HOODWISE / CONTEXT ENGINE</span><b>ANALYZING</b></div>
+      <div class="observatory-body">
+        <div class="orbit-map">
+          <i class="orbit orbit-one"></i><i class="orbit orbit-two"></i><i class="orbit orbit-three"></i>
+          <span class="orbit-node node-a"></span><span class="orbit-node node-b"></span><span class="orbit-node node-c"></span>
+          <div class="orbit-core"><strong>01</strong><span>SIGNAL</span></div>
+        </div>
+        <div class="observatory-readout">
+          <div><span>STRUCTURE</span><b>grounded</b><i></i></div>
+          <div><span>CONTEXT</span><b>scoped</b><i></i></div>
+          <div><span>RISK</span><b>visible</b><i></i></div>
+        </div>
+      </div>
+      <div class="observatory-stream"><span>QUESTION</span><b></b><span>CONTEXT</span><b></b><span>CLARITY</span><i></i></div>
+    </div>
+  </section>
+
+  <section class="intelligence-map" id="intelligence-map" aria-label="Robinhood Chain intelligence map">
+    <div class="section-head hw-reveal"><div class="section-eyebrow">LIVE PRODUCT MAP</div><h2>See the chain as one connected system.</h2><p>Choose a layer to get the practical frame: what it is, what it unlocks, and what needs verification.</p></div>
+    <div class="map-stage hw-reveal">
+      <div class="map-orbits" aria-hidden="true"><i></i><i></i><i></i></div>
+      <div class="map-core"><span>ROBINHOOD</span><b>CHAIN</b><em>4663 / ETH</em></div>
+      <div class="map-nodes" role="tablist" aria-label="Chain intelligence layers">
+        <button class="map-node active" role="tab" aria-selected="true" data-map="network"><b>01</b><span>Network</span></button>
+        <button class="map-node" role="tab" aria-selected="false" data-map="products"><b>02</b><span>Products</span></button>
+        <button class="map-node" role="tab" aria-selected="false" data-map="ecosystem"><b>03</b><span>Ecosystem</span></button>
+        <button class="map-node" role="tab" aria-selected="false" data-map="risk"><b>04</b><span>Risk layer</span></button>
+      </div>
+      <article class="map-readout" id="mapReadout" aria-live="polite"><span class="map-readout-kicker">01 / NETWORK</span><h3>Ethereum-compatible, built for financial rails.</h3><p>Arbitrum L2, ETH gas, EVM tooling, and predictable sequencing make the base layer familiar to builders.</p><div><span>CONFIRMED</span><b>Chain ID 4663 · public RPC is rate-limited</b></div></article>
+    </div>
+  </section>
+  <section class="how" id="how">
+    <div class="section-head hw-reveal">
+      <div class="section-eyebrow">01 — HOW IT WORKS</div>
+      <h2>Three steps, every time</h2>
+      <p>No black box — this is genuinely what happens behind every answer.</p>
+    </div>
+    <div class="how-steps">
+      <div class="how-step hw-reveal">
+        <div class="how-num">01</div>
+        <h3>You ask</h3>
+        <p>Anything about Robinhood Chain — the tech, a product, a token, a risk. No jargon required.</p>
+      </div>
+      <div class="how-step hw-reveal">
+        <div class="how-num">02</div>
+        <h3>Hoodwise cross-checks</h3>
+        <p>A curated knowledge base first, and — for anything that looks time-sensitive — an optional scoped live search when it is configured.</p>
+      </div>
+      <div class="how-step hw-reveal">
+        <div class="how-num">03</div>
+        <h3>You get a straight answer</h3>
+        <p>Calibrated to your question's depth, with real sources attached — not a wall of hedging.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="knows" id="knows">
+    <div class="section-head hw-reveal">
+      <div class="section-eyebrow">02 — COVERAGE</div>
+      <h2>Everything Hoodwise can explain</h2>
+      <p>A curated baseline covering the official stack and the community around it, with changing details clearly marked.</p>
+    </div>
+    <div class="card-grid">
+      <div class="card hw-reveal">
+        <div class="card-icon">◈</div>
+        <h3>Stock Tokens</h3>
+        <p>Tokenized US equities and ETFs, tradable 24/7 — how they're structured, where they're available, and what they're not.</p>
+      </div>
+      <div class="card hw-reveal">
+        <div class="card-icon">◈</div>
+        <h3>Robinhood Earn</h3>
+        <p>Self-custody USDG lending via Morpho — the yield, the insurance backstop, and the risk that isn't covered.</p>
+      </div>
+      <div class="card hw-reveal">
+        <div class="card-icon">◈</div>
+        <h3>AI &amp; agentic layer</h3>
+        <p>Trading MCP, Agentic Accounts, and what it actually means for an AI agent to trade with guardrails.</p>
+      </div>
+      <div class="card hw-reveal">
+        <div class="card-icon">◈</div>
+        <h3>Memecoin ecosystem</h3>
+        <p>NOXA Fun, CASHCAT, Cove, Bankr — the unofficial, permissionless side of the chain, risks included.</p>
+      </div>
+      <div class="card hw-reveal">
+        <div class="card-icon">◈</div>
+        <h3>Infra &amp; partners</h3>
+        <p>Chainlink, Uniswap, Alchemy, BitGo, Lighter — who does what, in plain terms.</p>
+      </div>
+      <div class="card hw-reveal">
+        <div class="card-icon">◈</div>
+        <h3>Risk &amp; caveats</h3>
+        <p>No native token, jurisdiction limits, and where regulation genuinely hasn't caught up yet.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="why" id="why">
+    <div class="why-grid">
+      <div class="hw-reveal">
+        <div class="section-eyebrow">03 — WHY NOT JUST GOOGLE IT</div>
+        <h2>Reading it yourself takes six tabs. This takes one question.</h2>
+        <p class="why-sub">Robinhood Chain's information is real, but scattered — official docs, press releases, and news coverage that don't talk to each other. Hoodwise reads all of it so you don't have to.</p>
+      </div>
+      <div class="why-compare hw-reveal">
+        <div class="why-col why-col-bad">
+          <div class="why-col-label">On your own</div>
+          <ul>
+            <li>5–6 articles to piece together one answer</li>
+            <li>Docs written for developers, not traders</li>
+            <li>No easy way to compare official vs. community info</li>
+          </ul>
+        </div>
+        <div class="why-col why-col-good">
+          <div class="why-col-label">With Hoodwise</div>
+          <ul>
+            <li>One question, one straight answer</li>
+            <li>Plain English, jargon explained inline</li>
+            <li>Official stack and the memecoin scene, both covered</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="preview" id="preview">
+    <div class="section-head hw-reveal">
+      <div class="section-eyebrow">04 — INSIDE THE APP</div>
+      <h2>Ask it anything, get a straight answer</h2>
+    </div>
+    <div class="preview-window hw-reveal">
+      <div class="preview-bar"><span></span><span></span><span></span></div>
+      <div class="preview-body" id="previewBody"></div>
+    </div>
+  </section>
+
+  <section class="trust" id="trust">
+    <div class="trust-grid">
+      <div class="trust-item hw-reveal">
+        <svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 3l7 4v5c0 4.5-3 8-7 9-4-1-7-4.5-7-9V7l7-4z" stroke="currentColor" stroke-width="1.6" fill="none"/></svg>
+        <div><h4>Independent</h4><p>Not affiliated with Robinhood Markets Inc.</p></div>
+      </div>
+      <div class="trust-item hw-reveal">
+        <svg viewBox="0 0 24 24" width="20" height="20"><path d="M4 12h16M12 4v16" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6" fill="none"/></svg>
+        <div><h4>No financial advice</h4><p>Explains how things work — never what to buy.</p></div>
+      </div>
+      <div class="trust-item hw-reveal">
+        <svg viewBox="0 0 24 24" width="20" height="20"><path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div><h4>Sources cited</h4><p>Real links attached to answers, not just claims.</p></div>
+      </div>
+      <div class="trust-item hw-reveal">
+        <svg viewBox="0 0 24 24" width="20" height="20"><path d="M5 12l4 4L19 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div><h4>Free, no account</h4><p>No wallet connect, no signup, no paywall.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="roadmap" id="roadmap">
+    <div class="section-head hw-reveal">
+      <div class="section-eyebrow">05 — ACTIVELY MAINTAINED</div>
+      <h2>Robinhood Chain moves fast. So do we.</h2>
+      <p>The knowledge base gets reviewed as the ecosystem changes. Here's what's actively being worked on.</p>
+    </div>
+    <div class="roadmap-list">
+      <div class="roadmap-item hw-reveal">
+        <span class="roadmap-tag roadmap-tag-shipped">Shipped</span>
+        <h4>Streaming responses</h4>
+        <p>Token-by-token replies are live — answers now arrive progressively instead of all at once.</p>
+      </div>
+      <div class="roadmap-item hw-reveal">
+        <span class="roadmap-tag">Ongoing</span>
+        <h4>Knowledge base refresh</h4>
+        <p>New launchpads, partners, and regulatory updates get reviewed in continuously.</p>
+      </div>
+      <div class="roadmap-item hw-reveal">
+        <span class="roadmap-tag">Next</span>
+        <h4>Mobile field testing</h4>
+        <p>Real-device validation across current browsers, reduced-motion, and slow networks.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq" id="faq">
+    <div class="section-head hw-reveal">
+      <div class="section-eyebrow">06 — GOOD TO KNOW</div>
+      <h2>Frequently asked</h2>
+    </div>
+    <div class="faq-list">
+      <details class="hw-reveal">
+        <summary>Is Hoodwise affiliated with Robinhood?</summary>
+        <p>No. Hoodwise is an independent project that explains Robinhood Chain. It has no official relationship with Robinhood Markets Inc.</p>
+      </details>
+      <details class="hw-reveal">
+        <summary>Is this financial advice?</summary>
+        <p>No. Hoodwise only explains how things work and surfaces real risks — it never recommends trades or gives financial advice.</p>
+      </details>
+      <details class="hw-reveal">
+        <summary>Does it cost anything?</summary>
+        <p>Hoodwise is free to use.</p>
+      </details>
+      <details class="hw-reveal">
+        <summary>Where does the information come from?</summary>
+        <p>A hand-curated knowledge base built from Robinhood's own announcements and reporting from established outlets, reviewed periodically as the chain evolves.</p>
+      </details>
+    </div>
+  </section>
+
+  <section class="final-cta hw-reveal">
+    <h2>Stop piecing it together yourself.</h2>
+    <p>Ask Hoodwise — it's free, source-grounded, and clear about what needs live verification.</p>
+    <a href="/app" class="btn-primary" data-transition>Ask Hoodwise <svg viewBox="0 0 24 24" width="15" height="15"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">Hoodwise</div>
+      <p>Independent explainer for Robinhood Chain. Not affiliated with Robinhood Markets Inc. Nothing here is financial advice.</p>
+      <a href="/app" class="footer-cta" data-transition>Launch Hoodwise →</a>
+    </div>
+  </footer>
+
+  <div class="hw-page-transition" id="pageTransition"></div>
+
+  <script src="/cursor.js"></script>
+  <script src="/landing.js"></script>
+</body>
+</html>
